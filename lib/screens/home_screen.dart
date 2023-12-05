@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen>
             builder: (context, value, child) {
               return Container(
                 color: col.value,
-              ); //Container(height:100,color: globaltheme!.value==Themes.DARK?Colors.black:Colors.white,);
+              );
             },
           ),
           Consumer<ResultProvider>(builder: (context, resultProvider, _) {

@@ -1,7 +1,7 @@
 import 'package:freo_task/enums/theme.dart';
 import 'package:freo_task/global/global.dart';
 import 'package:flutter/material.dart';
-
+import 'package:fluttertoast/fluttertoast.dart';
 class ThemeToggle extends StatefulWidget {
   const ThemeToggle({super.key});
 
@@ -62,7 +62,8 @@ class _ThemeToggleState extends State<ThemeToggle> {
         col.value = Colors.white;
       }
       sharedPreferences!
-          .setString('themes', globaltheme.toString().split('.')[1]);
+          .setString('theme', globaltheme.value.toString().split('.')[1]);
+      Fluttertoast.showToast(msg: "Theme preference saved successfully",toastLength: Toast.LENGTH_SHORT);
     }
   }
 }
