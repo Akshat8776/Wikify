@@ -13,7 +13,6 @@ class ResultProvider extends ChangeNotifier {
   SearchResult? searchResult;
   Current_State state = Current_State.IDLE;
   bool cache = false;
-  ResultProvider get searchProvider => ResultProvider();
 
   searchWord(String word, BuildContext ctx) async {
     word = word.trim();
